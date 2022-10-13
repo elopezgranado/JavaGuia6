@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package JavaGuia6;
+package EjExtras;
 
 /**
  *
  * @author A305649
  */
-public class Guia6_Ej1 {
+public class Ej05 {
 
     /**
      * @param args the command line arguments
