@@ -32,7 +32,7 @@ public class Ej21 {
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
                 matrizM[i][j] = (int) (Math.random() * 100);
-                System.out.print(matrizM[i][j]+" ");
+                System.out.print(matrizM[i][j]+"\t ");
             }
             System.out.println("");
         }
@@ -42,21 +42,19 @@ public class Ej21 {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 //matrizP[i][j] = (int) (Math.random() * 100);
-                matrizP[i][j] = matrizM[i+3][j+3];
-                System.out.print(matrizP[i][j]+" ");
+                matrizP[i][j] = matrizM[i+5][j+5];
+                System.out.print(matrizP[i][j]+"\t ");
             }
             System.out.println("");
         }
         
         // Busco matriz P en matriz M
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
-                if (i < 8 && j < 8) {
-                    if (matrizM[i][j] == matrizP[0][0] && matrizM[i][j+1] == matrizP[0][1] && matrizM[i][j+2] == matrizP[0][2]) {
-                        if (matrizM[i+1][j] == matrizP[1][0] && matrizM[i+1][j+1] == matrizP[1][1] && matrizM[i+1][j+2] == matrizP[1][2]) {
-                            if (matrizM[i+2][j] == matrizP[2][0] && matrizM[i+2][j+1] == matrizP[2][1] && matrizM[i+2][j+2] == matrizP[2][2]) {
-                                System.out.println("\nLa matriz P se encuentra dentro de la matriz M en la posición inicial ["+i+","+j+"]");
-                            }
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (matrizM[i][j] == matrizP[0][0] && matrizM[i][j+1] == matrizP[0][1] && matrizM[i][j+2] == matrizP[0][2]) {
+                    if (matrizM[i+1][j] == matrizP[1][0] && matrizM[i+1][j+1] == matrizP[1][1] && matrizM[i+1][j+2] == matrizP[1][2]) {
+                        if (matrizM[i+2][j] == matrizP[2][0] && matrizM[i+2][j+1] == matrizP[2][1] && matrizM[i+2][j+2] == matrizP[2][2]) {
+                            System.out.println("\nLa matriz P se encuentra dentro de la matriz M en la posición inicial ["+i+","+j+"]");
                         }
                     }
                 }
